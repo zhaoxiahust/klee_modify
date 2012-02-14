@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c
+Line: 51
+Stack: 
+	#0 00010130 in __create_new_dfile (dfile=28132464, size=0, name=28356016, defaults=28356416) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:51
+	#1 00010324 in klee_init_fds (n_files=0, file_length=0, sym_stdout_flag=0, save_all_writes_flag=0, max_failures=0) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:123
+	#2 00005196 in klee_init_env (argcPtr=28137040, argvPtr=28316592) at /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:193
+	#3 00000294 in __user_main (argc=1, argv=24270080) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:68
+	#4 00001097 in __uClibc_main (main=20691440, argc=1, argv=24270080, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:402
+	#5 00004368 in main (=1, =24270080)
+Info: 
+	address: 28356023
+	next: object at 28356416 of size 144
+		MO502[144] allocated at klee_init_fds():  %s = alloca %struct.stat64, align 8
+	prev: object at 28356016 of size 7
+		MO501[7] allocated at klee_init_fds():  %name = alloca [7 x i8], align 1

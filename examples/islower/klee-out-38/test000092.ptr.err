@@ -1,0 +1,14 @@
+Error: memory error: invalid pointer: mark_global
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c
+Line: 186
+Stack: 
+	#0 00010049 in klee_init_env (argcPtr=37071120, argvPtr=36930592) at /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:186
+	#1 00000294 in __user_main (argc=1, argv=35705328) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:68
+	#2 00001093 in __uClibc_main (main=29472704, argc=1, argv=35705328, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:402
+	#3 00004364 in main (=1, =35705328)
+Info: 
+	address: 36949008
+	next: object at 37071120 of size 4
+		MO462[4] allocated at __user_main():  %argcPtr = alloca i32
+	prev: object at 36949008 of size 16
+		MO5411[16] allocated at klee_init_env():  %211 = call noalias i8* @malloc(i64 %210) nounwind, !dbg !3025

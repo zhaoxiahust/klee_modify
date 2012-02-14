@@ -1,0 +1,18 @@
+klee hhhhh.bc -write-cvs
+PID: 3665
+Started: 2011-12-13 20:53:53
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-13 20:53:54
+Elapsed: 00:00:01
+KLEE: done: explored paths = 46
+KLEE: done: avg. constructs per query = 292
+KLEE: done: total queries = 46
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 46
+KLEE: done: query cex = 46
+
+KLEE: done: total instructions = 501
+KLEE: done: completed paths = 46
+KLEE: done: generated tests = 46

@@ -1,0 +1,5 @@
+Error: failed external call: pthread_join
+File: /home/kain/Documents/bishe/klee/examples/thread/thread.c
+Line: 51
+Stack: 
+	#0 00000064 in main (argc=1, argv=36557696) at /home/kain/Documents/bishe/klee/examples/thread/thread.c:51

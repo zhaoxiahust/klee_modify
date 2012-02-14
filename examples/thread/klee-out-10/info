@@ -1,0 +1,18 @@
+klee -libc=uclibc thread.bc
+PID: 7210
+Started: 2012-02-13 12:59:26
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2012-02-13 12:59:27
+Elapsed: 00:00:01
+KLEE: done: explored paths = 28
+KLEE: done: avg. constructs per query = 1
+KLEE: done: total queries = 1
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 1
+KLEE: done: query cex = 1
+
+KLEE: done: total instructions = 3874
+KLEE: done: completed paths = 28
+KLEE: done: generated tests = 4

@@ -1,0 +1,2 @@
+KLEE: ERROR: /home/kain/Documents/bishe/klee/examples/check/thread_lib/thread.c:17: failed external call: pthread_join
+KLEE: NOTE: now ignoring this error at this location

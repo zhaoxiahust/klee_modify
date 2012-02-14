@@ -1,0 +1,18 @@
+klee islower.bc
+PID: 18416
+Started: 2011-12-12 10:08:57
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-12 10:08:57
+Elapsed: 00:00:00
+KLEE: done: explored paths = 5
+KLEE: done: avg. constructs per query = 10
+KLEE: done: total queries = 3
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 3
+KLEE: done: query cex = 3
+
+KLEE: done: total instructions = 66
+KLEE: done: completed paths = 5
+KLEE: done: generated tests = 5

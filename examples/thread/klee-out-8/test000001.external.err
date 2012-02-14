@@ -1,0 +1,5 @@
+Error: failed external call: strcmp
+File: /home/kain/Documents/bishe/klee/examples/thread/thread.c
+Line: 40
+Stack: 
+	#0 00000066 in main (argc=1, argv=26217008) at /home/kain/Documents/bishe/klee/examples/thread/thread.c:40

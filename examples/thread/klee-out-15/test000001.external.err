@@ -1,0 +1,7 @@
+Error: failed external call: pthread_join
+File: /home/kain/Documents/bishe/klee/examples/thread/thread.c
+Line: 51
+Stack: 
+	#0 00000115 in __user_main (argc=1, argv=46164464) at /home/kain/Documents/bishe/klee/examples/thread/thread.c:51
+	#1 00000536 in __uClibc_main (main=44968752, argc=1, argv=46164464, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:402
+	#2 00002120 in main (=1, =46164464)

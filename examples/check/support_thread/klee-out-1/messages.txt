@@ -1,0 +1,3 @@
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to function: pthread_create
+KLEE: WARNING: calling external: pthread_create(35654576, 0, 35141344, 35653872)

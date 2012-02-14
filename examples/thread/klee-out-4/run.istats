@@ -1,0 +1,69 @@
+version: 1
+creator: klee
+pid: 500
+cmd: thread.bc
+
+
+positions: instr line
+event: Q : Queries
+event: Qiv : QueriesInvalid
+event: Qv : QueriesValid
+event: Qtime : QueryTime
+event: Icov : CoveredInstructions
+event: Forks : Forks
+event: Ireal : InstructionRealTimes
+event: Itime : InstructionTimes
+event: I : Instructions
+event: UCdist : MinDistToUncovered
+event: Rtime : ResolveTime
+event: States : States
+event: Iuncov : UncoveredInstructions
+events: Q Qiv Qv Qtime Icov Forks Ireal Itime I UCdist Rtime States Iuncov 
+ob=/home/kain/Documents/bishe/klee/examples/thread/./klee-out-4/assembly.ll
+fn=func
+fl=/home/kain/Documents/bishe/klee/examples/thread/thread.c
+16 8 0 0 0 0 0 0 0 0 0 0 0 0 1 
+17 8 0 0 0 0 0 0 0 0 0 0 0 0 1 
+18 8 0 0 0 0 0 0 0 0 0 0 0 0 1 
+19 8 0 0 0 0 0 0 0 0 0 0 0 0 1 
+20 8 0 0 0 0 0 0 0 0 0 0 0 0 1 
+21 8 0 0 0 0 0 0 0 0 0 0 0 0 1 
+22 10 0 0 0 0 0 0 0 0 0 0 0 0 1 
+23 10 0 0 0 0 0 0 0 0 0 0 0 0 1 
+24 10 0 0 0 0 0 0 0 0 0 0 0 0 1 
+27 11 0 0 0 0 0 0 0 0 0 0 0 0 1 
+28 11 0 0 0 0 0 0 0 0 0 0 0 0 1 
+31 13 0 0 0 0 0 0 0 0 0 0 0 0 1 
+32 13 0 0 0 0 0 0 0 0 0 0 0 0 1 
+35 14 0 0 0 0 0 0 0 0 0 0 0 0 1 
+36 14 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fn=main
+47 23 0 0 0 0 1 0 0 0 1 0 0 0 0 
+48 23 0 0 0 0 1 0 0 0 1 0 0 0 0 
+49 23 0 0 0 0 1 0 0 0 1 0 0 0 0 
+50 23 0 0 0 0 1 0 0 0 1 0 0 0 0 
+51 23 0 0 0 0 1 0 0 0 1 0 0 0 0 
+52 23 0 0 0 0 1 0 0 0 1 0 0 0 0 
+53 23 0 0 0 0 1 0 0 0 1 0 0 0 0 
+54 23 0 0 0 0 1 0 0 0 1 0 0 0 0 
+55 23 0 0 0 0 1 0 0 0 1 0 0 0 0 
+56 23 0 0 0 0 1 0 0 0 1 0 0 0 0 
+57 23 0 0 0 0 1 0 0 0 1 0 0 0 0 
+58 24 0 0 0 0 1 0 0 0 1 0 0 0 0 
+59 24 1 1 0 137 1 0 0 0 1 0 0 0 0 
+60 25 0 0 0 0 0 0 0 0 0 0 0 0 1 
+61 27 0 0 0 0 0 0 0 0 0 0 0 0 1 
+62 27 0 0 0 0 0 0 0 0 0 0 0 0 1 
+63 27 0 0 0 0 0 0 0 0 0 0 0 0 1 
+66 37 0 0 0 0 0 0 0 0 0 0 0 0 1 
+67 37 0 0 0 0 0 0 0 0 0 0 0 0 1 
+70 40 0 0 0 0 0 0 0 0 0 0 0 0 1 
+71 40 0 0 0 0 0 0 0 0 0 0 0 0 1 
+72 40 0 0 0 0 0 0 0 0 0 0 0 0 1 
+73 40 0 0 0 0 0 0 0 0 0 0 0 0 1 
+76 42 0 0 0 0 0 0 0 0 0 0 0 0 1 
+77 42 0 0 0 0 0 0 0 0 0 0 0 0 1 
+80 46 0 0 0 0 0 0 0 0 0 0 0 0 1 
+81 46 0 0 0 0 0 0 0 0 0 0 0 0 1 
+84 51 0 0 0 0 0 0 0 0 0 0 0 0 1 
+85 51 0 0 0 0 0 0 0 0 0 0 0 0 1 

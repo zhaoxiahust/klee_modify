@@ -1,0 +1,15 @@
+Error: ASSERTION FAIL: new_off == f->off
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c
+Line: 397
+Stack: 
+	#0 00006989 in __fd_lseek (fd=1, offset=0, whence=1) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:397
+	#1 00009228 in lseek64 (fd=1, off=0, whence=1) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd_32.c:180
+	#2 00004176 in __stdio_seek (stream=36710864, pos=37400208, whence=1) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/_cs_funcs.c:66
+	#3 00003882 in fseeko64 (stream=36710864, offset=0, whence=1) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fseeko.c:43
+	#4 00003463 in fseek (stream=36710864, offset=0, whence=1) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fseeko.c:28
+	#5 00002044 in __stdio_trans2w_o (stream=36710864, oflag=128) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/_trans2w.c:67
+	#6 00003390 in fwrite_unlocked (ptr=36699056, size=1, nmemb=0, stream=36710864) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fwrite.c:22
+	#7 00002834 in fputs_unlocked (s=36699056, stream=36710864) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fputs.c:27
+	#8 00001543 in puts (s=36699056) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/puts.c:26
+	#9 00000215 in aa (b) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:16
+	#10 00000275 in hi (ptr=37165952) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:40

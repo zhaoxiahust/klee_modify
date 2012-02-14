@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c
+Line: 780
+Stack: 
+	#0 00006517 in ioctl (fd=0, request=21505) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:780
+	#1 00003950 in tcgetattr (fd=0, termios_p=30684064) at /home/kain/Documents/bishe/klee-uclibc/libc/termios/tcgetattr.c:43
+	#2 00003480 in isatty (fd=0) at /home/kain/Documents/bishe/klee-uclibc/libc/termios/isatty.c:30
+	#3 00002639 in _stdio_init () at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/_stdio.c:282
+	#4 00000852 in __uClibc_init () at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:239
+	#5 00000982 in __uClibc_main (main=23328704, argc=1, argv=29002432, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:323
+	#6 00004364 in main (=1, =29002432)
+Info: 
+	address: 16
+	next: object at 23781808 of size 79
+		MO7[79] allocated at main():  call void @__uClibc_main(i32 (i32, i8**, i8**)* bitcast (i32 (i32, i8**)* @__user_main to i32 (i32, i8**, i8**)*), i32 %0, i8** %1, void ()* null, void ()* null, void ()* null, i8* null)

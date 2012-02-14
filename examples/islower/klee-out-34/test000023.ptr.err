@@ -1,0 +1,12 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fputc.c
+Line: 25
+Stack: 
+	#0 00000556 in __fputc_unlocked (c=10, stream=27930368) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fputc.c:25
+	#1 00001558 in puts (s=27918448) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/puts.c:28
+	#2 00000215 in aa (b) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:16
+	#3 00000275 in hi (ptr=28410880) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:40
+Info: 
+	address: 0
+	next: object at 21146496 of size 31
+		MO3[31] allocated at main():  call void @__uClibc_main(i32 (i32, i8**, i8**)* bitcast (i32 (i32, i8**)* @__user_main to i32 (i32, i8**, i8**)*), i32 %0, i8** %1, void ()* null, void ()* null, void ()* null, i8* null)

@@ -1,0 +1,8 @@
+Error: --sym-args expects three integer arguments <min-argvs> <max-argvs> <max-len>
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c
+Line: 24
+Stack: 
+	#0 00009520 in klee_init_env (argcPtr=37071120, argvPtr=36930592) at /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:24
+	#1 00000294 in __user_main (argc=1, argv=35705328) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:68
+	#2 00001093 in __uClibc_main (main=29472704, argc=1, argv=35705328, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:402
+	#3 00004364 in main (=1, =35705328)

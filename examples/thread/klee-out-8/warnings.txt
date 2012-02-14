@@ -1,0 +1,2 @@
+KLEE: ERROR: /home/kain/Documents/bishe/klee/examples/thread/thread.c:40: failed external call: strcmp
+KLEE: NOTE: now ignoring this error at this location

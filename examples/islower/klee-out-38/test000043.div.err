@@ -1,0 +1,10 @@
+Error: divide by zero
+File: /home/kain/Documents/bishe/klee/runtime/Intrinsic/klee_div_zero_check.c
+Line: 14
+Stack: 
+	#0 00010429 in klee_div_zero_check (z=1) at /home/kain/Documents/bishe/klee/runtime/Intrinsic/klee_div_zero_check.c:14
+	#1 00003407 in fwrite_unlocked (ptr=36699056, size=1, nmemb=0, stream=36710864) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fwrite.c:27
+	#2 00002834 in fputs_unlocked (s=36699056, stream=36710864) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fputs.c:27
+	#3 00001543 in puts (s=36699056) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/puts.c:26
+	#4 00000215 in aa (b) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:16
+	#5 00000275 in hi (ptr=37165952) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:40

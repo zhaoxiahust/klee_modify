@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee-uclibc/libc/stdio/_WRITE.c
+Line: 83
+Stack: 
+	#0 00002323 in __stdio_WRITE (stream=36710864, buf=37007952, bufsize=1) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/_WRITE.c:83
+	#1 00000663 in __fputc_unlocked (c=10, stream=36710864) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fputc.c:63
+	#2 00001554 in puts (s=36699056) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/puts.c:28
+	#3 00000215 in aa (b) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:16
+	#4 00000275 in hi (ptr=37165952) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:40
+Info: 
+	address: 0
+	next: object at 29925808 of size 79
+		MO7[79] allocated at main():  call void @__uClibc_main(i32 (i32, i8**, i8**)* bitcast (i32 (i32, i8**)* @__user_main to i32 (i32, i8**, i8**)*), i32 %0, i8** %1, void ()* null, void ()* null, void ()* null, i8* null)

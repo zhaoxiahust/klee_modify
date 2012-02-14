@@ -1,0 +1,18 @@
+klee c++++++++.bc
+PID: 4061
+Started: 2011-12-15 09:24:12
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-15 09:24:13
+Elapsed: 00:00:01
+KLEE: done: explored paths = 2
+KLEE: done: avg. constructs per query = 8
+KLEE: done: total queries = 2
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 2
+KLEE: done: query cex = 2
+
+KLEE: done: total instructions = 59
+KLEE: done: completed paths = 2
+KLEE: done: generated tests = 2

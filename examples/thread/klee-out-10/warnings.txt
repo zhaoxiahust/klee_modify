@@ -1,0 +1,8 @@
+KLEE: ERROR: /home/kain/Documents/bishe/klee/examples/thread/thread.c:24: memory error: invalid pointer: make_symbolic
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:372: invalid function pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:150: abort failure
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/string/memcpy.c:29: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location

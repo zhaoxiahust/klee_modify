@@ -1,0 +1,6 @@
+KLEE: WARNING: undefined reference to function: __xstat64
+KLEE: WARNING: undefined reference to function: klee_get_valuel
+KLEE: WARNING: undefined reference to function: pthread_create
+KLEE: WARNING: calling external: syscall(16, 0, 21505, 51255360)
+KLEE: WARNING: calling __user_main with extra arguments.
+KLEE: WARNING: calling external: __xstat64(1, 51204016, 51180960)

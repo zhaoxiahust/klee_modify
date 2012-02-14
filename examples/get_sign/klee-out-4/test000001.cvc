@@ -1,0 +1,16 @@
+__tmpInt8  : BITVECTOR(8);
+__tmpInt16  : BITVECTOR(16);
+__tmpInt32  : BITVECTOR(32);
+__tmpInt64  : BITVECTOR(64);
+a_0x2ebe240  : ARRAY BITVECTOR(32) OF BITVECTOR(8);
+%----------------------------------------------------
+ASSERT( NOT(0hex61 = BVSX(a_0x2ebe240[0hex00000000],32)
+[7:0]
+) 
+ );
+ASSERT( NOT(SBVLE(BVSX(a_0x2ebe240[0hex00000000],32)
+[7:0],0hex60)
+) 
+ );
+%----------------------------------------------------
+QUERY( FALSE  );

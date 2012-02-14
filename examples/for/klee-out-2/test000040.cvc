@@ -1,0 +1,209 @@
+__tmpInt8  : BITVECTOR(8);
+__tmpInt16  : BITVECTOR(16);
+__tmpInt32  : BITVECTOR(32);
+__tmpInt64  : BITVECTOR(64);
+inputccccc_0x2c21190  : ARRAY BITVECTOR(32) OF BITVECTOR(8);
+%----------------------------------------------------
+ASSERT( SBVLT(0hex00000000,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000001,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000002,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000003,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000004,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000005,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000006,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000007,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000008,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000009,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000000A,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000000B,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000000C,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000000D,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000000E,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000000F,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000010,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000011,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000012,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000013,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000014,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000015,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000016,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000017,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000018,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000019,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000001A,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000001B,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000001C,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000001D,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000001E,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex0000001F,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000020,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000021,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000022,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000023,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000024,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000025,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000026,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+ );
+ASSERT( NOT(SBVLT(0hex00000027,(inputccccc_0x2c21190[0hex00000003] @ (inputccccc_0x2c21190[0hex00000002] @ (inputccccc_0x2c21190[0hex00000001] @ inputccccc_0x2c21190[0hex00000000])
+)
+)
+)
+) 
+ );
+%----------------------------------------------------
+QUERY( FALSE  );

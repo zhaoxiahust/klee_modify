@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee/examples/regexp/Regexp.c
+Line: 23
+Stack: 
+	#0 00000080 in matchhere (re=29677319, text=29624261) at /home/kain/Documents/bishe/klee/examples/regexp/Regexp.c:23
+	#1 00000024 in matchstar (c, re=29677319, text=29624261) at /home/kain/Documents/bishe/klee/examples/regexp/Regexp.c:16
+	#2 00000103 in matchhere (re=29677317, text=29624261) at /home/kain/Documents/bishe/klee/examples/regexp/Regexp.c:26
+	#3 00000024 in matchstar (c, re=29677317, text=29624261) at /home/kain/Documents/bishe/klee/examples/regexp/Regexp.c:16
+	#4 00000103 in matchhere (re=29677315, text=29624261) at /home/kain/Documents/bishe/klee/examples/regexp/Regexp.c:26
+	#5 00000024 in matchstar (c, re=29677315, text=29624261) at /home/kain/Documents/bishe/klee/examples/regexp/Regexp.c:16
+	#6 00000103 in matchhere (re=29677313, text=29624261) at /home/kain/Documents/bishe/klee/examples/regexp/Regexp.c:26
+	#7 00000155 in matchhere (re=29677312, text=29624260) at /home/kain/Documents/bishe/klee/examples/regexp/Regexp.c:30
+	#8 00000196 in match (re=29677312, text=29624256) at /home/kain/Documents/bishe/klee/examples/regexp/Regexp.c:38
+	#9 00000235 in main () at /home/kain/Documents/bishe/klee/examples/regexp/Regexp.c:59
+Info: 
+	address: 29677319
+	next: object at 29678960 of size 4
+		MO16[4] allocated at match():  %retval = alloca i32
+	prev: object at 29677312 of size 7
+		MO11[7] allocated at main():  %re = alloca [7 x i8]

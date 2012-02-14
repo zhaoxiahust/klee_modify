@@ -1,0 +1,18 @@
+klee -libc=uclibc -posix-runtime ppppppp.bc
+PID: 3721
+Started: 2011-12-19 09:04:23
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-19 09:04:26
+Elapsed: 00:00:03
+KLEE: done: explored paths = 190
+KLEE: done: avg. constructs per query = 19
+KLEE: done: total queries = 10
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 10
+KLEE: done: query cex = 10
+
+KLEE: done: total instructions = 25765
+KLEE: done: completed paths = 190
+KLEE: done: generated tests = 110

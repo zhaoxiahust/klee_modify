@@ -1,0 +1,2 @@
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/string/strcmp.c:34: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location

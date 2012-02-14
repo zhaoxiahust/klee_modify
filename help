@@ -1,0 +1,409 @@
+OVERVIEW:  klee
+
+USAGE: klee [options] <input bytecode> <program arguments>...
+
+OPTIONS:
+  -all-external-warnings                  - 
+  -allow-external-sym-calls               - 
+  -allow-seed-extension                   - Allow extra (unbound) values to become symbolic during seeding.
+  -allow-seed-truncation                  - Allow smaller buffers than in seeds.
+  -always-output-seeds                    - 
+  -asm-verbose                            - Add comments to directives.
+  -batch-instructions=<uint>              - Number of instructions to batch when using --use-batching-search
+  -batch-time=<number>                    - Amount of time to batch when using --use-batching-search
+  -cex-cache-exp                          - 
+  -cex-cache-try-all                      - try substituting all counterexamples before asking STP
+  -check-div-zero                         - Inject checks for division-by-zero
+  -code-model                             - Choose code model
+    =default                              -   Target default code model
+    =small                                -   Small code model
+    =kernel                               -   Kernel code model
+    =medium                               -   Medium code model
+    =large                                -   Large code model
+  -const-array-opt                        - Enable various optimizations involving all-constant arrays.
+  -debug-cex-cache-check-binding          - 
+  -debug-check-for-implied-values         - 
+  -debug-log-merge                        - 
+  -debug-log-state-merge                  - 
+  -debug-print-escaping-functions         - Print functions whose address is taken.
+  -debug-print-instructions               - Print instructions during execution.
+  -debug-validate-solver                  - 
+  -disable-excess-fp-precision            - Disable optimizations that may increase FP precision
+  -disable-fp-elim                        - Disable frame pointer elimination optimization
+  -disable-inlining                       - Do not run the inliner pass
+  -disable-internalize                    - Do not mark all symbols as internal
+  -disable-non-leaf-fp-elim               - Disable frame pointer elimination optimization for non-leaf funcs
+  -disable-opt                            - Do not run any optimization passes
+  -disable-spill-fusing                   - Disable fusing of spill code into instructions
+  -dump-states-on-halt                    - 
+  -emit-all-errors                        - Generate tests cases for all errors (default=one per (error,instruction) pair)
+  -enable-correct-eh-support              - Make the -lowerinvoke pass insert expensive, but correct, EH code
+  -enable-fp-mad                          - Enable less precise MAD instructions to be generated
+  -enable-full-load-pre                   - 
+  -enable-load-pre                        - 
+  -enable-no-infs-fp-math                 - Enable FP math optimizations that assume no +-Infs
+  -enable-no-nans-fp-math                 - Enable FP math optimizations that assume no NaNs
+  -enable-unsafe-fp-math                  - Enable optimizations that may decrease FP precision
+  -environ=<string>                       - Parse environ from given file (in "env" format)
+  -exit-on-error                          - Exit if errors occur
+  -fdata-sections                         - Emit data into separate sections
+  -ffunction-sections                     - Emit functions into separate sections
+  -float-abi                              - Choose float ABI type
+    =default                              -   Target default float ABI type
+    =soft                                 -   Soft float ABI (implied by -soft-float)
+    =hard                                 -   Hard float ABI (uses FP registers)
+  -help                                   - Display available options (-help-hidden for more)
+  -init-env                               - Create custom environment.  Options that can be passed as arguments to the programs are: --sym-argv <max-len>  --sym-argvs <min-argvs> <max-argvs> <max-len> + file model options
+  -internalize-public-api-file=<filename> - A file containing list of symbol names to preserve
+  -internalize-public-api-list=<list>     - A list of symbol names to preserve
+  -istats-write-interval=<number>         - Approximate number of seconds between istats writes (default: 10.0)
+  -jit-emit-debug                         - Emit debug information to debugger
+  -jit-enable-eh                          - Emit exception handling information
+  -join-liveintervals                     - Coalesce copies (default=true)
+  -libc                                   - Choose libc version (none by default).
+    =none                                 -   Don't link in a libc
+    =klee                                 -   Link in klee libc
+    =uclibc                               -   Link in uclibc (adapted for klee)
+  -limit-float-precision=<uint>           - Generate low-precision inline sequences for some float libcalls
+  -load=<pluginfilename>                  - Load the specified plugin
+  -make-concrete-symbolic=<uint>          - Rate at which to make concrete reads symbolic (0=off)
+  -max-depth=<uint>                       - Only allow this many symbolic branches (0=off)
+  -max-forks=<uint>                       - Only fork this many times (-1=off)
+  -max-instruction-time=<number>          - Only allow a single instruction to take this much time (default=0 (off))
+  -max-memory=<uint>                      - Refuse to fork when more above this about of memory (in MB, 0=off)
+  -max-memory-inhibit                     - Inhibit forking at memory cap (vs. random terminate)
+  -max-static-cpfork-pct=<number>         - 
+  -max-static-cpsolve-pct=<number>        - 
+  -max-static-fork-pct=<number>           - 
+  -max-static-solve-pct=<number>          - 
+  -max-stp-time=<number>                  - Maximum amount of time for a single query (default=120s)
+  -max-sym-array-size=<uint>              - 
+  -max-time=<number>                      - Halt execution after the specified number of seconds (0=off)
+  -merge-at-exit=<string>                 - 
+  -named-seed-matching                    - Use names to match symbolic objects to inputs.
+  -no-externals                           - Do not allow external functin calls
+  -no-output                              - Don't generate test files
+  -no-prefer-cex                          - 
+  -no-truncate-source-lines               - Don't truncate long lines in the output source
+  -nozero-initialized-in-bss              - Don't place zero-initialized symbols into bss section
+  -only-output-states-covering-new        - 
+  -only-replay-seeds                      - Discard states that do not have a seed.
+  -only-seed                              - Stop execution after seeding is done without doing regular search.
+  -optimize                               - Optimize before execution
+  -output-dir=<string>                    - Directory to write results in (defaults to klee-out-N)
+  -output-istats                          - Write instruction level statistics (in callgrind format)
+  -output-module                          - Write the bitcode for the final transformed module
+  -output-source                          - Write the assembly for the final transformed source
+  -output-stats                           - Write running stats trace file
+  -pc-all-const-widths                    - 
+  -pc-all-widths                          - 
+  -pc-multibyte-reads                     - 
+  -pc-prefix-width                        - 
+  -pc-width-as-arg                        - 
+  -posix-runtime                          - Link with POSIX runtime
+  -pre-RA-sched                           - Instruction schedulers available (before register allocation):
+    =list-td                              -   Top-down list scheduler
+    =list-ilp                             -   Bottom-up register pressure aware list scheduling which tries to balance ILP and register pressure
+    =list-hybrid                          -   Bottom-up register pressure aware list scheduling which tries to balance latency and register pressure
+    =source                               -   Similar to list-burr but schedules in source order when possible
+    =list-tdrr                            -   Top-down register reduction list scheduling
+    =list-burr                            -   Bottom-up register reduction list scheduling
+    =default                              -   Best scheduler for the target
+  -print-after                            - Print IR after specified passes
+    =adce                                 -   Aggressive Dead Code Elimination
+    =argpromotion                         -   Promote 'by reference' arguments to scalars
+    =basicaa                              -   Basic Alias Analysis (default AA impl)
+    =basiccg                              -   Basic CallGraph Construction
+    =break-crit-edges                     -   Break critical edges in CFG
+    =calcspillweights                     -   Calculate spill weights
+    =codegenprepare                       -   Optimize for code generation
+    =collector-metadata                   -   Create Garbage Collector Module Metadata
+    =constmerge                           -   Merge Duplicate Global Constants
+    =dead-mi-elimination                  -   Remove dead machine instructions
+    =deadargelim                          -   Dead Argument Elimination
+    =deadarghaX0r                         -   Dead Argument Hacking (BUGPOINT USE ONLY; DO NOT USE)
+    =deadtypeelim                         -   Dead Type Elimination
+    =domfrontier                          -   Dominance Frontier Construction
+    =domtree                              -   Dominator Tree Construction
+    =dse                                  -   Dead Store Elimination
+    =functionattrs                        -   Deduce function attributes
+    =globaldce                            -   Dead Global Elimination
+    =globalopt                            -   Global Variable Optimizer
+    =globalsmodref-aa                     -   Simple mod/ref analysis for globals
+    =gvn                                  -   Global Value Numbering
+    =indvars                              -   Canonicalize Induction Variables
+    =inline                               -   Function Integration/Inlining
+    =instcombine                          -   Combine redundant instructions
+    =internalize                          -   Internalize Global Symbols
+    =ipconstprop                          -   Interprocedural constant propagation
+    =ipsccp                               -   Interprocedural Sparse Conditional Constant Propagation
+    =iv-users                             -   Induction Variable Users
+    =jump-threading                       -   Jump Threading
+    =lazy-value-info                      -   Lazy Value Information Analysis
+    =lcssa                                -   Loop-Closed SSA Form Pass
+    =licm                                 -   Loop Invariant Code Motion
+    =linearscan-regalloc                  -   Linear Scan Register Allocator
+    =liveintervals                        -   Live Interval Analysis
+    =livestacks                           -   Live Stack Slot Analysis
+    =livevars                             -   Live Variable Analysis
+    =loop-deletion                        -   Delete dead loops
+    =loop-index-split                     -   Index Split Loops
+    =loop-reduce                          -   Loop Strength Reduction
+    =loop-rotate                          -   Rotate Loops
+    =loop-unroll                          -   Unroll loops
+    =loop-unswitch                        -   Unswitch loops
+    =loops                                -   Natural Loop Information
+    =loopsimplify                         -   Canonicalize natural loops
+    =lowerinvoke                          -   Lower invoke and unwind, for unwindless code generators
+    =lowersetjmp                          -   Lower Set Jump
+    =lowerswitch                          -   Lower SwitchInst's to branches
+    =machine-cse                          -   Machine Common Subexpression Elimination
+    =machine-loops                        -   Machine Natural Loop Construction
+    =machine-sink                         -   Machine code sinking
+    =machinedomtree                       -   MachineDominator Tree Construction
+    =machinelicm                          -   Machine Loop Invariant Code Motion
+    =machinemoduleinfo                    -   Machine Module Information
+    =machineverifier                      -   Verify generated machine code
+    =mem2reg                              -   Promote Memory to Register
+    =memcpyopt                            -   MemCpy Optimization
+    =memdep                               -   Memory Dependence Analysis
+    =mergereturn                          -   Unify function exit nodes
+    =no-aa                                -   No Alias Analysis (always returns 'may' alias)
+    =no-profile                           -   No Profile Information
+    =opt-phis                             -   Optimize machine instruction PHIs
+    =peephole-opts                        -   Peephole Optimizations
+    =phi-node-elimination                 -   Eliminate PHI nodes for register allocation
+    =pre-alloc-splitting                  -   Pre-Register Allocation Live Interval Splitting
+    =preverify                            -   Preliminary module verification
+    =print-alias-sets                     -   Alias Set Printer
+    =print-function                       -   Print function to stderr
+    =print-module                         -   Print module to stderr
+    =print-used-types                     -   Find Used Types
+    =processimpdefs                       -   Process Implicit Definitions.
+    =prologepilog                         -   Prologue/Epilogue Insertion
+    =prune-eh                             -   Remove unused exception handling info
+    =reassociate                          -   Reassociate expressions
+    =scalar-evolution                     -   Scalar Evolution Analysis
+    =scalarrepl                           -   Scalar Replacement of Aggregates
+    =sccp                                 -   Sparse Conditional Constant Propagation
+    =simple-register-coalescing           -   Simple Register Coalescing
+    =simplify-libcalls                    -   Simplify well-known library calls
+    =simplifycfg                          -   Simplify the CFG
+    =slotindexes                          -   Slot index numbering
+    =split-geps                           -   split complex GEPs into simple GEPs
+    =stack-protector                      -   Insert stack protectors
+    =stack-slot-coloring                  -   Stack Slot Coloring
+    =strip                                -   Strip all symbols from a module
+    =strip-dead-debug-info                -   Strip debug info for unused symbols
+    =strip-dead-prototypes                -   Strip Unused Function Prototypes
+    =strip-debug-declare                  -   Strip all llvm.dbg.declare intrinsics
+    =strip-nondebug                       -   Strip all symbols, except dbg symbols, from a module
+    =strong-phi-node-elimination          -   Eliminate PHI nodes for register allocation, intelligently
+    =tailcallelim                         -   Tail Call Elimination
+    =targetdata                           -   Target Data Layout
+    =twoaddressinstruction                -   Two-Address instruction pass
+    =unreachable-mbb-elimination          -   Remove unreachable machine basic blocks
+    =unreachableblockelim                 -   Remove unreachable blocks from the CFG
+    =verify                               -   Module Verifier
+    =virtregmap                           -   Virtual Register Map
+  -print-after-all                        - Print IR after each pass
+  -print-before                           - Print IR before specified passes
+    =adce                                 -   Aggressive Dead Code Elimination
+    =argpromotion                         -   Promote 'by reference' arguments to scalars
+    =basicaa                              -   Basic Alias Analysis (default AA impl)
+    =basiccg                              -   Basic CallGraph Construction
+    =break-crit-edges                     -   Break critical edges in CFG
+    =calcspillweights                     -   Calculate spill weights
+    =codegenprepare                       -   Optimize for code generation
+    =collector-metadata                   -   Create Garbage Collector Module Metadata
+    =constmerge                           -   Merge Duplicate Global Constants
+    =dead-mi-elimination                  -   Remove dead machine instructions
+    =deadargelim                          -   Dead Argument Elimination
+    =deadarghaX0r                         -   Dead Argument Hacking (BUGPOINT USE ONLY; DO NOT USE)
+    =deadtypeelim                         -   Dead Type Elimination
+    =domfrontier                          -   Dominance Frontier Construction
+    =domtree                              -   Dominator Tree Construction
+    =dse                                  -   Dead Store Elimination
+    =functionattrs                        -   Deduce function attributes
+    =globaldce                            -   Dead Global Elimination
+    =globalopt                            -   Global Variable Optimizer
+    =globalsmodref-aa                     -   Simple mod/ref analysis for globals
+    =gvn                                  -   Global Value Numbering
+    =indvars                              -   Canonicalize Induction Variables
+    =inline                               -   Function Integration/Inlining
+    =instcombine                          -   Combine redundant instructions
+    =internalize                          -   Internalize Global Symbols
+    =ipconstprop                          -   Interprocedural constant propagation
+    =ipsccp                               -   Interprocedural Sparse Conditional Constant Propagation
+    =iv-users                             -   Induction Variable Users
+    =jump-threading                       -   Jump Threading
+    =lazy-value-info                      -   Lazy Value Information Analysis
+    =lcssa                                -   Loop-Closed SSA Form Pass
+    =licm                                 -   Loop Invariant Code Motion
+    =linearscan-regalloc                  -   Linear Scan Register Allocator
+    =liveintervals                        -   Live Interval Analysis
+    =livestacks                           -   Live Stack Slot Analysis
+    =livevars                             -   Live Variable Analysis
+    =loop-deletion                        -   Delete dead loops
+    =loop-index-split                     -   Index Split Loops
+    =loop-reduce                          -   Loop Strength Reduction
+    =loop-rotate                          -   Rotate Loops
+    =loop-unroll                          -   Unroll loops
+    =loop-unswitch                        -   Unswitch loops
+    =loops                                -   Natural Loop Information
+    =loopsimplify                         -   Canonicalize natural loops
+    =lowerinvoke                          -   Lower invoke and unwind, for unwindless code generators
+    =lowersetjmp                          -   Lower Set Jump
+    =lowerswitch                          -   Lower SwitchInst's to branches
+    =machine-cse                          -   Machine Common Subexpression Elimination
+    =machine-loops                        -   Machine Natural Loop Construction
+    =machine-sink                         -   Machine code sinking
+    =machinedomtree                       -   MachineDominator Tree Construction
+    =machinelicm                          -   Machine Loop Invariant Code Motion
+    =machinemoduleinfo                    -   Machine Module Information
+    =machineverifier                      -   Verify generated machine code
+    =mem2reg                              -   Promote Memory to Register
+    =memcpyopt                            -   MemCpy Optimization
+    =memdep                               -   Memory Dependence Analysis
+    =mergereturn                          -   Unify function exit nodes
+    =no-aa                                -   No Alias Analysis (always returns 'may' alias)
+    =no-profile                           -   No Profile Information
+    =opt-phis                             -   Optimize machine instruction PHIs
+    =peephole-opts                        -   Peephole Optimizations
+    =phi-node-elimination                 -   Eliminate PHI nodes for register allocation
+    =pre-alloc-splitting                  -   Pre-Register Allocation Live Interval Splitting
+    =preverify                            -   Preliminary module verification
+    =print-alias-sets                     -   Alias Set Printer
+    =print-function                       -   Print function to stderr
+    =print-module                         -   Print module to stderr
+    =print-used-types                     -   Find Used Types
+    =processimpdefs                       -   Process Implicit Definitions.
+    =prologepilog                         -   Prologue/Epilogue Insertion
+    =prune-eh                             -   Remove unused exception handling info
+    =reassociate                          -   Reassociate expressions
+    =scalar-evolution                     -   Scalar Evolution Analysis
+    =scalarrepl                           -   Scalar Replacement of Aggregates
+    =sccp                                 -   Sparse Conditional Constant Propagation
+    =simple-register-coalescing           -   Simple Register Coalescing
+    =simplify-libcalls                    -   Simplify well-known library calls
+    =simplifycfg                          -   Simplify the CFG
+    =slotindexes                          -   Slot index numbering
+    =split-geps                           -   split complex GEPs into simple GEPs
+    =stack-protector                      -   Insert stack protectors
+    =stack-slot-coloring                  -   Stack Slot Coloring
+    =strip                                -   Strip all symbols from a module
+    =strip-dead-debug-info                -   Strip debug info for unused symbols
+    =strip-dead-prototypes                -   Strip Unused Function Prototypes
+    =strip-debug-declare                  -   Strip all llvm.dbg.declare intrinsics
+    =strip-nondebug                       -   Strip all symbols, except dbg symbols, from a module
+    =strong-phi-node-elimination          -   Eliminate PHI nodes for register allocation, intelligently
+    =tailcallelim                         -   Tail Call Elimination
+    =targetdata                           -   Target Data Layout
+    =twoaddressinstruction                -   Two-Address instruction pass
+    =unreachable-mbb-elimination          -   Remove unreachable machine basic blocks
+    =unreachableblockelim                 -   Remove unreachable blocks from the CFG
+    =verify                               -   Module Verifier
+    =virtregmap                           -   Virtual Register Map
+  -print-before-all                       - Print IR before each pass
+  -print-machineinstrs                    - Print generated machine code
+  -randomize-fork                         - 
+  -read-args=<string>                     - File to read arguments from (one arg per line)
+  -realign-stack                          - Realign stack if needed
+  -regalloc                               - Register allocator to use
+    =default                              -   pick register allocator based on -O option
+    =fast                                 -   fast register allocator
+    =linearscan                           -   linear scan register allocator
+  -relocation-model                       - Choose relocation model
+    =default                              -   Target default relocation model
+    =static                               -   Non-relocatable code
+    =pic                                  -   Fully relocatable, position independent code
+    =dynamic-no-pic                       -   Relocatable external references, non-relocatable code
+  -replay-keep-symbolic                   - Replay the test cases only by assertingthe bytes, not necessarily making them concrete.
+  -replay-out=<out file>                  - Specify an out file to replay
+  -replay-out-dir=<output directory>      - Specify a directory to replay .out files from
+  -replay-path=<path file>                - Specify a path file to replay
+  -rewriter                               - Rewriter to use (default=local)
+    =local                                -   local rewriter
+    =trivial                              -   trivial rewriter
+  -run-in=<string>                        - Change to the given directory prior to executing
+  -schedule-spills                        - Schedule spill code
+  -seed-out=<string>                      - 
+  -seed-out-dir=<string>                  - 
+  -seed-time=<number>                     - Amount of time to dedicate to seeds, before normal search (default=0 (off))
+  -shrink-wrap                            - Shrink wrap callee-saved register spills/restores
+  -simplify-sym-indices                   - 
+  -soft-float                             - Generate software floating point library calls
+  -spiller                                - Spiller to use: (default: standard)
+    =trivial                              -   trivial spiller
+    =standard                             -   default spiller
+    =splitting                            -   splitting spiller
+    =inline                               -   inline spiller
+  -spiller-splits-edges                   - Allow critical edge splitting during spilling
+  -stack-alignment=<uint>                 - Override default stack alignment
+  -stack-protector-buffer-size=<uint>     - Lower bound for a buffer to be considered for stack protection
+  -stats                                  - Enable statistics output from program
+  -stats-write-interval=<number>          - Approximate number of seconds between stats writes (default: 1.0)
+  -stop-after-n-instructions=<uint>       - Stop execution after specified number of instructions (0=off)
+  -stop-after-n-tests=<uint>              - Stop execution after generating the given number of tests.  Extra tests corresponding to partially explored paths will also be dumped.
+  -stp-optimize-divides                   - Optimize constant divides into add/shift/multiplies before passing to STP
+  -strip-all                              - Strip all symbol info from executable
+  -strip-debug                            - Strip debugger symbol info from executable
+  -suppress-external-warnings             - 
+  -switch-type                            - Select the implementation of switch
+    =simple                               -   lower to ordered branches
+    =llvm                                 -   lower using LLVM
+    =internal                             -   execute switch internally
+  -tailcallopt                            - Turn fastcc calls into tail calls by (potentially) changing ABI.
+  -time-passes                            - Time each pass, printing elapsed time for each on exit
+  -track-instruction-time                 - Enable tracking of time for individual instructions
+  -uncovered-update-interval=<number>     - 
+  -unwind-tables                          - Generate unwinding tables for all functions
+  -use-asm-addresses                      - 
+  -use-batching-search                    - Use batching searcher (keep running selected state for N instructions/time, see --batch-instructions and --batch-time
+  -use-bump-merge                         - Enable support for klee_merge() (extra experimental)
+  -use-cache                              - Use validity caching
+  -use-call-paths                         - Enable calltree tracking for instruction level statistics
+  -use-cex-cache                          - Use counterexample caching
+  -use-constant-arrays                    - 
+  -use-construct-hash                     - Use hash-consing during STP query construction.
+  -use-fast-cex-solver                    - 
+  -use-forked-stp                         - Run STP in forked process
+  -use-independent-solver                 - Use constraint independence
+  -use-interleaved-MD2U-NURS              - 
+  -use-interleaved-NURS                   - 
+  -use-interleaved-RS                     - 
+  -use-interleaved-covnew-NURS            - 
+  -use-interleaved-cpicnt-NURS            - 
+  -use-interleaved-icnt-NURS              - 
+  -use-interleaved-query-cost-NURS        - 
+  -use-iterative-deepening-time-search    - (experimental)
+  -use-merge                              - Enable support for klee_merge() (experimental)
+  -use-non-uniform-random-search          - 
+  -use-query-pc-log                       - 
+  -use-random-path                        - 
+  -use-random-search                      - 
+  -use-stp-query-pc-log                   - 
+  -use-visitor-hash                       - Use hash-consing during expr visitation.
+  -verify-dom-info                        - Verify dominator info (time consuming)
+  -verify-each                            - Verify intermediate results of all passes
+  -verify-loop-info                       - Verify loop info (time consuming)
+  -version                                - Display the version of this program
+  -warn-all-externals                     - Give initial warning for all externals.
+  -watchdog                               - Use a watchdog process to enforce --max-time.
+  -weight-type                            - Set the weight type for --use-non-uniform-random-search
+    =none                                 -   use (2^depth)
+    =icnt                                 -   use current pc exec count
+    =cpicnt                               -   use current pc exec count
+    =query-cost                           -   use query cost
+    =md2u                                 -   use min dist to uncovered
+    =covnew                               -   use min dist to uncovered + coveringNew flag
+  -write-cov                              - Write coverage information for each test case
+  -write-cvcs                             - Write .cvc files for each test case
+  -write-paths                            - Write .path files for each test case
+  -write-pcs                              - Write .pc files for each test case
+  -write-sym-paths                        - Write .sym.path files for each test case
+  -write-test-info                        - Write additional test case information
+  -x86-asm-syntax                         - Choose style of code to emit from X86 backend:
+    =att                                  -   Emit AT&T-style assembly
+    =intel                                -   Emit Intel-style assembly
+  -zero-seed-extension                    - 

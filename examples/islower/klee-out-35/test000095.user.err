@@ -1,0 +1,8 @@
+Error: --max-fail expects an integer argument <max-failures>
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c
+Line: 24
+Stack: 
+	#0 00009349 in klee_init_env (argcPtr=30746560, argvPtr=30767648) at /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:24
+	#1 00000294 in __user_main (argc=1, argv=29002432) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:68
+	#2 00001093 in __uClibc_main (main=23328704, argc=1, argv=29002432, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:402
+	#3 00004364 in main (=1, =29002432)

@@ -1,0 +1,2 @@
+KLEE: WARNING: undefined reference to function: pthread_join
+KLEE: WARNING: calling external: pthread_join(12370169555311111083, 0)

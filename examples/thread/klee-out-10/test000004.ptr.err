@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee-uclibc/libc/string/memcpy.c
+Line: 29
+Stack: 
+	#0 00000959 in memcpy (s1=585328784, s2=34421016, n=16) at /home/kain/Documents/bishe/klee-uclibc/libc/string/memcpy.c:29
+	#1 00000425 in __uClibc_main (main=32662032, argc=1, argv=34420992, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:314
+	#2 00002189 in main (=1, =34420992)
+Info: 
+	address: 585328784
+	next: object at 223140305632 of size 768
+		MO51[768] (no allocation info)
+	prev: object at 34937552 of size 8
+		MO1493[8] allocated at memcpy():  %n_addr = alloca i64, align 8

@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c
+Line: 57
+Stack: 
+	#0 00010147 in __create_new_dfile (dfile=28132464, size=0, name=28356016, defaults=28356416) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:57
+	#1 00010324 in klee_init_fds (n_files=0, file_length=0, sym_stdout_flag=0, save_all_writes_flag=0, max_failures=0) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:123
+	#2 00005196 in klee_init_env (argcPtr=28137040, argvPtr=28316592) at /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:193
+	#3 00000294 in __user_main (argc=1, argv=24270080) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:68
+	#4 00001097 in __uClibc_main (main=20691440, argc=1, argv=24270080, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:402
+	#5 00004368 in main (=1, =24270080)
+Info: 
+	address: 28132464
+	next: object at 28137040 of size 4
+		MO462[4] allocated at __user_main():  %argcPtr = alloca i32
+	prev: object at 28132464 of size 0
+		MO511[0] allocated at klee_init_fds():  %10 = call noalias i8* @malloc(i64 %9) nounwind, !dbg !2894

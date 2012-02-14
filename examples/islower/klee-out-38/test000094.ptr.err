@@ -1,0 +1,12 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c
+Line: 34
+Stack: 
+	#0 00009977 in klee_init_env (argcPtr=37071120, argvPtr=36930592) at /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:34
+	#1 00000294 in __user_main (argc=1, argv=35705328) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:68
+	#2 00001093 in __uClibc_main (main=29472704, argc=1, argv=35705328, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:402
+	#3 00004364 in main (=1, =35705328)
+Info: 
+	address: 0
+	next: object at 29925808 of size 79
+		MO7[79] allocated at main():  call void @__uClibc_main(i32 (i32, i8**, i8**)* bitcast (i32 (i32, i8**)* @__user_main to i32 (i32, i8**, i8**)*), i32 %0, i8** %1, void ()* null, void ()* null, void ()* null, i8* null)

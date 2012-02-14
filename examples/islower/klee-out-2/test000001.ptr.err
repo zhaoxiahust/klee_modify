@@ -1,0 +1,11 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee/examples/islower/islower.c
+Line: 29
+Stack: 
+	#0 00000060 in hi (ptr=29864240) at /home/kain/Documents/bishe/klee/examples/islower/islower.c:29
+Info: 
+	address: 29864240
+	next: object at 29879424 of size 23
+		MO37[23] allocated at main():  %argc_addr = alloca i32, align 4
+	prev: object at 29863104 of size 8
+		MO70[8] allocated at hi():  %ptr_addr = alloca i8*, align 8

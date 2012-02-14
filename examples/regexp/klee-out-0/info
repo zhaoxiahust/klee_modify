@@ -1,0 +1,18 @@
+klee Regexp.bc
+PID: 3258
+Started: 2011-12-06 15:24:33
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-06 15:26:33
+Elapsed: 00:02:00
+KLEE: done: explored paths = 7692
+KLEE: done: avg. constructs per query = 41
+KLEE: done: total queries = 6889
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 6889
+KLEE: done: query cex = 6889
+
+KLEE: done: total instructions = 5086685
+KLEE: done: completed paths = 7692
+KLEE: done: generated tests = 6804

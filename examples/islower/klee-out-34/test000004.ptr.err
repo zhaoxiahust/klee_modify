@@ -1,0 +1,15 @@
+Error: memory error: invalid pointer: make_symbolic
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c
+Line: 99
+Stack: 
+	#0 00010418 in klee_init_fds (n_files=0, file_length=0, sym_stdout_flag=0, save_all_writes_flag=0, max_failures=0) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:99
+	#1 00005196 in klee_init_env (argcPtr=28137040, argvPtr=28316592) at /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:193
+	#2 00000294 in __user_main (argc=1, argv=24270080) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:68
+	#3 00001097 in __uClibc_main (main=20691440, argc=1, argv=24270080, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:402
+	#4 00004368 in main (=1, =24270080)
+Info: 
+	address: 28311360
+	next: object at 28312272 of size 8
+		MO475[8] allocated at klee_init_env():  %211 = call noalias i8* @malloc(i64 %210) nounwind, !dbg !3025
+	prev: object at 28311360 of size 4
+		MO500[4] allocated at klee_init_fds():  %x.i = alloca i32, align 4

@@ -1,0 +1,5 @@
+Error: failed external call: kain
+File: /home/kain/Documents/bishe/klee/examples/islower/hihi.c
+Line: 69
+Stack: 
+	#0 00000119 in main (argc=1, argv=28662576) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:69

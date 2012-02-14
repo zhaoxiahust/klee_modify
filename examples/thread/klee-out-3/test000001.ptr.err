@@ -1,0 +1,13 @@
+Error: memory error: invalid pointer: make_symbolic
+File: /home/kain/Documents/bishe/klee/examples/thread/thread.c
+Line: 24
+Stack: 
+	#0 00000248 in __user_main (argc=1, argv=57621088) at /home/kain/Documents/bishe/klee/examples/thread/thread.c:24
+	#1 00001035 in __uClibc_main (main=50783264, argc=1, argv=57621088, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:402
+	#2 00003887 in main (=1, =57621088)
+Info: 
+	address: 12370169555311111083
+	next: object at 223140305632 of size 768
+		MO51[768] (no allocation info)
+	prev: object at 59613408 of size 8
+		MO3392[8] allocated at __user_main():  %thread = alloca i64

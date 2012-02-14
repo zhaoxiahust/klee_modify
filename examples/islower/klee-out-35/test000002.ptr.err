@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c
+Line: 57
+Stack: 
+	#0 00010143 in __create_new_dfile (dfile=30786512, size=0, name=30992512, defaults=30992864) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:57
+	#1 00010320 in klee_init_fds (n_files=0, file_length=0, sym_stdout_flag=0, save_all_writes_flag=0, max_failures=0) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:123
+	#2 00009438 in klee_init_env (argcPtr=30746560, argvPtr=30767648) at /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:193
+	#3 00000294 in __user_main (argc=1, argv=29002432) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:68
+	#4 00001093 in __uClibc_main (main=23328704, argc=1, argv=29002432, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:402
+	#5 00004364 in main (=1, =29002432)
+Info: 
+	address: 30786512
+	next: object at 30948592 of size 4
+		MO500[4] allocated at klee_init_fds():  %x.i = alloca i32, align 4
+	prev: object at 30786512 of size 0
+		MO511[0] allocated at klee_init_fds():  %10 = call noalias i8* @malloc(i64 %9) nounwind, !dbg !2894

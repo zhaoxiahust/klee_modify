@@ -1,0 +1,26 @@
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:51: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:57: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:55: ASSERTION FAIL: size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:99: memory error: invalid pointer: make_symbolic
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/stdio/_WRITE.c:83: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:347: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:328: check_memory_access: memory error
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fputc.c:49: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fputc.c:25: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/string/memrchr.c:27: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/Intrinsic/klee_div_zero_check.c:14: divide by zero
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:397: ASSERTION FAIL: new_off == f->off
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/examples/islower/hihi.c:108: failed external call: pthread_join
+KLEE: NOTE: now ignoring this error at this location

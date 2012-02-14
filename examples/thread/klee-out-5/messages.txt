@@ -1,0 +1,3 @@
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to function: putchar
+KLEE: WARNING: undefined reference to function: strcmp

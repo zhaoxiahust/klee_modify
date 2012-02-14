@@ -1,0 +1,11 @@
+Error: memory error: invalid pointer: make_symbolic
+File: /home/kain/Documents/bishe/klee/examples/thread/thread.c
+Line: 24
+Stack: 
+	#0 00000058 in main (argc=1, argv=34213280) at /home/kain/Documents/bishe/klee/examples/thread/thread.c:24
+Info: 
+	address: 12370169555311111083
+	next: object at 223140305632 of size 768
+		MO51[768] (no allocation info)
+	prev: object at 34261584 of size 3
+		MO63[3] allocated at global:.str6

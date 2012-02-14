@@ -1,0 +1,31 @@
+__tmpInt8  : BITVECTOR(8);
+__tmpInt16  : BITVECTOR(16);
+__tmpInt32  : BITVECTOR(32);
+__tmpInt64  : BITVECTOR(64);
+model_version_0x311e980  : ARRAY BITVECTOR(32) OF BITVECTOR(8);
+inputccccc_0x30e00c0  : ARRAY BITVECTOR(32) OF BITVECTOR(8);
+inputbbbbb_0x31293b0  : ARRAY BITVECTOR(32) OF BITVECTOR(8);
+%----------------------------------------------------
+ASSERT( 0hex00000001 = (model_version_0x311e980[0hex00000003] @ (model_version_0x311e980[0hex00000002] @ (model_version_0x311e980[0hex00000001] @ model_version_0x311e980[0hex00000000])
+)
+)
+
+ );
+ASSERT( SBVLT(0hex00000014,(inputccccc_0x30e00c0[0hex00000003] @ (inputccccc_0x30e00c0[0hex00000002] @ (inputccccc_0x30e00c0[0hex00000001] @ inputccccc_0x30e00c0[0hex00000000])
+)
+)
+)
+ );
+ASSERT( SBVLT(0hex00000014,(inputbbbbb_0x31293b0[0hex00000003] @ (inputbbbbb_0x31293b0[0hex00000002] @ (inputbbbbb_0x31293b0[0hex00000001] @ inputbbbbb_0x31293b0[0hex00000000])
+)
+)
+)
+ );
+ASSERT( NOT(SBVLT(0hex00000064,(inputbbbbb_0x31293b0[0hex00000003] @ (inputbbbbb_0x31293b0[0hex00000002] @ (inputbbbbb_0x31293b0[0hex00000001] @ inputbbbbb_0x31293b0[0hex00000000])
+)
+)
+)
+) 
+ );
+%----------------------------------------------------
+QUERY( FALSE  );

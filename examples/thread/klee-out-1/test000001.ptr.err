@@ -1,0 +1,14 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee-uclibc/libc/string/strcmp.c
+Line: 34
+Stack: 
+	#0 00001887 in strcmp (s1=12370169555311111083, s2=33077760) at /home/kain/Documents/bishe/klee-uclibc/libc/string/strcmp.c:34
+	#1 00000257 in __user_main (argc=1, argv=30056464) at /home/kain/Documents/bishe/klee/examples/thread/thread.c:40
+	#2 00001032 in __uClibc_main (main=24674736, argc=1, argv=30056464, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:402
+	#3 00003884 in main (=1, =30056464)
+Info: 
+	address: 12370169555311111083
+	next: object at 223140305632 of size 768
+		MO51[768] (no allocation info)
+	prev: object at 33493200 of size 8
+		MO3401[8] allocated at strcmp():  %s2_addr = alloca i8*, align 8

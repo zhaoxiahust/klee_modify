@@ -1,0 +1,17 @@
+klee ppppppp.bc
+PID: 3602
+Started: 2011-12-19 08:53:37
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-19 08:53:37
+Elapsed: 00:00:00
+KLEE: done: explored paths = 7
+KLEE: done: total queries = 0
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 0
+KLEE: done: query cex = 0
+
+KLEE: done: total instructions = 73
+KLEE: done: completed paths = 7
+KLEE: done: generated tests = 7

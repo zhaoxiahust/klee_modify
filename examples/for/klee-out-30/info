@@ -1,0 +1,18 @@
+klee -libc=klee ifqiantao_thread.bc
+PID: 11344
+Started: 2011-12-22 16:00:08
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-22 16:00:08
+Elapsed: 00:00:00
+KLEE: done: explored paths = 5
+KLEE: done: avg. constructs per query = 8
+KLEE: done: total queries = 2
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 2
+KLEE: done: query cex = 2
+
+KLEE: done: total instructions = 63
+KLEE: done: completed paths = 5
+KLEE: done: generated tests = 5

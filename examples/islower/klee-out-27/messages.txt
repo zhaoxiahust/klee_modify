@@ -1,0 +1,3 @@
+KLEE: WARNING: undefined reference to function: pthread_create
+KLEE: WARNING: undefined reference to function: puts
+KLEE: WARNING: calling external: puts(24970272)

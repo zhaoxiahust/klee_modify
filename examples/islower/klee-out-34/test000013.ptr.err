@@ -1,0 +1,16 @@
+Error: check_memory_access: memory error
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c
+Line: 328
+Stack: 
+	#0 00008609 in write (fd=1, buf=28413600, count=9223372036854775807) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:328
+	#1 00001979 in __stdio_WRITE (stream=27930368, buf=28413600, bufsize=1) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/_WRITE.c:52
+	#2 00000667 in __fputc_unlocked (c=10, stream=27930368) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fputc.c:63
+	#3 00001558 in puts (s=27918448) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/puts.c:28
+	#4 00000215 in aa (b) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:16
+	#5 00000275 in hi (ptr=28410880) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:40
+Info: 
+	address: 28413600
+	next: object at 223140305632 of size 768
+		MO51[768] (no allocation info)
+	prev: object at 28413600 of size 1
+		MO813[1] allocated at __fputc_unlocked():  %uc = alloca i8

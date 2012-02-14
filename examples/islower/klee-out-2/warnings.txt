@@ -1,0 +1,2 @@
+KLEE: ERROR: /home/kain/Documents/bishe/klee/examples/islower/islower.c:29: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location

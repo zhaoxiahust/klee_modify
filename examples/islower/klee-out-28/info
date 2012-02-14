@@ -1,0 +1,18 @@
+klee -libc=uclibc -posix-runtime --write-cvcs islower.bc
+PID: 6114
+Started: 2011-12-16 08:52:31
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-16 08:52:32
+Elapsed: 00:00:01
+KLEE: done: explored paths = 7
+KLEE: done: avg. constructs per query = 62
+KLEE: done: total queries = 10
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 10
+KLEE: done: query cex = 10
+
+KLEE: done: total instructions = 9112
+KLEE: done: completed paths = 7
+KLEE: done: generated tests = 7

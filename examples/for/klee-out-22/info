@@ -1,0 +1,18 @@
+klee_original ceshixunhuancishu.bc
+PID: 3850
+Started: 2011-12-18 14:40:00
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-18 14:40:13
+Elapsed: 00:00:13
+KLEE: done: explored paths = 171
+KLEE: done: avg. constructs per query = 1086
+KLEE: done: total queries = 172
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 172
+KLEE: done: query cex = 172
+
+KLEE: done: total instructions = 2712
+KLEE: done: completed paths = 171
+KLEE: done: generated tests = 171

@@ -1,0 +1,4 @@
+KLEE: WARNING: undefined reference to function: pthread_join
+KLEE: WARNING: undefined reference to function: putchar
+KLEE: WARNING: calling external: pthread_join(12370169555311111083, 0)
+KLEE: WARNING: calling external: putchar(104)

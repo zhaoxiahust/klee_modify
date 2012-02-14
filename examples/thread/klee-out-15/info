@@ -1,0 +1,3 @@
+klee -libc=uclibc thread.bc
+PID: 7338
+Started: 2012-02-13 13:16:44

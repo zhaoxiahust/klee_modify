@@ -1,0 +1,2 @@
+KLEE: ERROR: /home/kain/Documents/bishe/klee/examples/thread/thread.c:24: memory error: invalid pointer: make_symbolic
+KLEE: NOTE: now ignoring this error at this location

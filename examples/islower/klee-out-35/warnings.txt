@@ -1,0 +1,68 @@
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:51: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:57: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:55: ASSERTION FAIL: size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_init.c:99: memory error: invalid pointer: make_symbolic
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/stdio/_WRITE.c:83: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:347: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:328: check_memory_access: memory error
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fputc.c:49: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fputc.c:25: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/string/memrchr.c:27: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/Intrinsic/klee_div_zero_check.c:14: divide by zero
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:397: ASSERTION FAIL: new_off == f->off
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:267: invalid function pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:264: invalid function pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/stdlib/_atexit.c:323: invalid function pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:186: memory error: invalid pointer: mark_global
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:24: too many arguments for klee_init_env
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:34: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:24: --max-fail expects an integer argument <max-failures>
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:24: --sym-files expects two integer arguments <no-sym-files> <sym-file-len>
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:34: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:24: --sym-args expects three integer arguments <min-argvs> <max-argvs> <max-len>
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:34: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:34: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:24: --sym-arg expects an integer argument <max-len>
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/klee_init_env.c:54: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:372: invalid function pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd_32.c:55: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:150: abort failure
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:639: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:1270: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:49: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:776: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:780: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location

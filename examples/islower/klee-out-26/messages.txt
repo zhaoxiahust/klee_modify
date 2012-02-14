@@ -1,0 +1,27 @@
+KLEE: WARNING: undefined reference to function: _ZNSt8ios_base4InitC1Ev
+KLEE: WARNING: undefined reference to function: _ZNSt8ios_base4InitD1Ev
+KLEE: WARNING: undefined reference to variable: _ZSt4cout
+KLEE: WARNING: undefined reference to function: _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+KLEE: WARNING: undefined reference to function: __xstat64
+KLEE: WARNING: undefined reference to function: fwrite
+KLEE: WARNING: undefined reference to function: klee_get_valuel
+KLEE: WARNING: undefined reference to function: pthread_cancel
+KLEE: WARNING: undefined reference to function: pthread_create
+KLEE: WARNING: undefined reference to function: pthread_getspecific
+KLEE: WARNING: undefined reference to function: pthread_key_create
+KLEE: WARNING: undefined reference to function: pthread_key_delete
+KLEE: WARNING: undefined reference to function: pthread_mutex_init
+KLEE: WARNING: undefined reference to function: pthread_mutex_lock
+KLEE: WARNING: undefined reference to function: pthread_mutex_trylock
+KLEE: WARNING: undefined reference to function: pthread_mutex_unlock
+KLEE: WARNING: undefined reference to function: pthread_mutexattr_destroy
+KLEE: WARNING: undefined reference to function: pthread_mutexattr_init
+KLEE: WARNING: undefined reference to function: pthread_mutexattr_settype
+KLEE: WARNING: undefined reference to function: pthread_once
+KLEE: WARNING: undefined reference to function: pthread_setspecific
+KLEE: WARNING: calling external: _ZNSt8ios_base4InitC1Ev(54749600)
+KLEE: WARNING: calling external: syscall(16, 0, 21505, 54915008)
+KLEE: WARNING: calling __user_main with extra arguments.
+KLEE: WARNING: calling external: __xstat64(1, 54812992, 55126160)
+KLEE: WARNING: calling external: _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(54747296, 54748928)
+KLEE: WARNING: calling external: _ZNSt8ios_base4InitD1Ev(54749600)

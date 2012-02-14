@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c
+Line: 1270
+Stack: 
+	#0 00008112 in __fd_open (pathname=36704624, flags=131072, mode=4099387112) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd.c:1270
+	#1 00008850 in open (pathname=36704624, flags=131072) at /home/kain/Documents/bishe/klee/runtime/POSIX/fd_32.c:59
+	#2 00000722 in __check_one_fd (fd=0, mode=131072) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:143
+	#3 00001050 in __uClibc_main (main=29472704, argc=1, argv=35705328, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:336
+	#4 00004364 in main (=1, =35705328)
+Info: 
+	address: 36704634
+	next: object at 36705120 of size 4
+		MO69[4] allocated at global:been_there_done_that.2846
+	prev: object at 36704624 of size 10
+		MO68[10] allocated at global:.str7

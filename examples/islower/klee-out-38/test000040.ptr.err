@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/kain/Documents/bishe/klee-uclibc/libc/string/memrchr.c
+Line: 27
+Stack: 
+	#0 00004329 in memrchr (s=36699056, c=10, n=0) at /home/kain/Documents/bishe/klee-uclibc/libc/string/memrchr.c:27
+	#1 00003730 in __stdio_fwrite (buffer=36699056, bytes=0, stream=36710864) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/_fwrite.c:49
+	#2 00003419 in fwrite_unlocked (ptr=36699056, size=1, nmemb=0, stream=36710864) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fwrite.c:28
+	#3 00002834 in fputs_unlocked (s=36699056, stream=36710864) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/fputs.c:27
+	#4 00001543 in puts (s=36699056) at /home/kain/Documents/bishe/klee-uclibc/libc/stdio/puts.c:26
+	#5 00000215 in aa (b) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:16
+	#6 00000275 in hi (ptr=37165952) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:40
+Info: 
+	address: 36699055
+	next: object at 36699056 of size 19
+		MO58[19] allocated at global:.str1
+	prev: object at 36698656 of size 19
+		MO57[19] allocated at global:.str

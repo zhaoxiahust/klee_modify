@@ -1,0 +1,16 @@
+KLEE: WARNING: undefined reference to function: __xstat64
+KLEE: WARNING: undefined reference to function: klee_get_valuel
+KLEE: WARNING: undefined reference to function: pthread_create
+KLEE: WARNING: undefined reference to function: pthread_join
+KLEE: WARNING: undefined reference to function: pthread_mutex_lock
+KLEE: WARNING: undefined reference to function: pthread_mutex_unlock
+KLEE: WARNING: calling external: getuid()
+KLEE: WARNING: calling external: geteuid()
+KLEE: WARNING: calling external: getgid()
+KLEE: WARNING: calling external: getegid()
+KLEE: WARNING: calling __user_main with extra arguments.
+KLEE: WARNING: calling external: __xstat64(1, 27982496, 28356416)
+KLEE: WARNING: calling external: pthread_mutex_lock(28409376)
+KLEE: WARNING: calling external: pthread_mutex_unlock(28409376)
+KLEE: WARNING: calling external: syscall(8, 1, 0, 0)
+KLEE: WARNING: calling external: pthread_join(12370169555311111083, 0)

@@ -1,0 +1,18 @@
+klee_original -libc=uclibc -posix-runtime c++++++++.bc
+PID: 4065
+Started: 2011-12-15 09:24:54
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-15 09:24:54
+Elapsed: 00:00:00
+KLEE: done: explored paths = 2
+KLEE: done: avg. constructs per query = 19
+KLEE: done: total queries = 3
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 3
+KLEE: done: query cex = 3
+
+KLEE: done: total instructions = 5981
+KLEE: done: completed paths = 2
+KLEE: done: generated tests = 2

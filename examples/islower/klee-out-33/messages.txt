@@ -1,0 +1,9 @@
+KLEE: WARNING: undefined reference to function: pthread_create
+KLEE: WARNING: undefined reference to function: pthread_join
+KLEE: WARNING: undefined reference to function: pthread_mutex_lock
+KLEE: WARNING: undefined reference to function: pthread_mutex_unlock
+KLEE: WARNING: undefined reference to function: puts
+KLEE: WARNING: calling external: pthread_mutex_lock(19624368)
+KLEE: WARNING: calling external: puts(19715280)
+KLEE: WARNING: calling external: pthread_mutex_unlock(19624368)
+KLEE: WARNING: calling external: pthread_join(12370169555311111083, 0)

@@ -1,0 +1,18 @@
+klee get_signfun.bc -write-cvcs
+PID: 3947
+Started: 2011-12-05 20:46:10
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-05 20:46:10
+Elapsed: 00:00:00
+KLEE: done: explored paths = 3
+KLEE: done: avg. constructs per query = 7
+KLEE: done: total queries = 3
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 3
+KLEE: done: query cex = 3
+
+KLEE: done: total instructions = 57
+KLEE: done: completed paths = 3
+KLEE: done: generated tests = 3

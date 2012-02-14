@@ -1,0 +1,5 @@
+Error: failed external call: pthread_join
+File: /home/kain/Documents/bishe/klee/examples/islower/hihi.c
+Line: 108
+Stack: 
+	#0 00000141 in main (argc=1, argv=39805632) at /home/kain/Documents/bishe/klee/examples/islower/hihi.c:108

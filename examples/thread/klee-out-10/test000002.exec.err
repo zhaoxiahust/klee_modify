@@ -1,0 +1,6 @@
+Error: invalid function pointer
+File: /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c
+Line: 372
+Stack: 
+	#0 00000526 in __uClibc_main (main=32662032, argc=1, argv=34420992, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/kain/Documents/bishe/klee-uclibc/libc/misc/internals/__uClibc_main.c:372
+	#1 00002189 in main (=1, =34420992)

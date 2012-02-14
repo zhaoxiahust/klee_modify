@@ -1,0 +1,18 @@
+klee kkkkkkkkkkk.bc
+PID: 4117
+Started: 2011-12-18 15:19:25
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2011-12-18 15:19:26
+Elapsed: 00:00:01
+KLEE: done: explored paths = 24
+KLEE: done: avg. constructs per query = 135
+KLEE: done: total queries = 27
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 27
+KLEE: done: query cex = 27
+
+KLEE: done: total instructions = 395
+KLEE: done: completed paths = 24
+KLEE: done: generated tests = 24

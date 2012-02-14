@@ -1,0 +1,2 @@
+./configure --with-llvm=/home/kain/Documents/bishe/llvm-2.8 --with-uclibc=/home/kain/Documents/bishe/klee-uclibc --enable-posix-runtime
+make ENABLE_OPTIMIZED=1
