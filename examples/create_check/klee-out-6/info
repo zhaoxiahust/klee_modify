@@ -1,0 +1,18 @@
+klee -write-pcs hhhhh.bc
+PID: 4011
+Started: 2012-02-15 08:47:42
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2012-02-15 08:47:42
+Elapsed: 00:00:00
+KLEE: done: explored paths = 2
+KLEE: done: avg. constructs per query = 8
+KLEE: done: total queries = 2
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 2
+KLEE: done: query cex = 2
+
+KLEE: done: total instructions = 19
+KLEE: done: completed paths = 2
+KLEE: done: generated tests = 2
