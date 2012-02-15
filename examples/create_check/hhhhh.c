@@ -3,7 +3,7 @@
  */
 
 //	printf("out hi function\n");
-
+///////////////////测试是否从网上的down下来
 int main(int argc, char **argv) {
     int c ;
   klee_make_symbolic(&c, sizeof(c), "input111111");
