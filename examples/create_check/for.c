@@ -3,7 +3,7 @@
  */
 
 //test just a 
-//ni dongde
+//kkkkkkkkk
 //	printf("out hi function\n");
 
 int main(int argc, char **argv) {
