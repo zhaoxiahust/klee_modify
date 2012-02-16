@@ -22,3 +22,16 @@ files, pipes, environment variables, and passing command line
 arguments.
 
 For further information, see the webpage or docs in www/.
+
+
+/////////////my work
+1.track thread's instruction and find the constraint
+
+2.jump out of the dead loop when sequence loop exist by setting a max
+time to track the same branch instruction
+
+3.fork a new state for each branch instruction but only collect the
+constraint of the symbolic data
+
+4.finished a thread file(only pthread_* function and its simple
+definition),the file is inclued in libkleeRunTest
