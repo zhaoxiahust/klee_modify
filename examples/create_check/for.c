@@ -1,7 +1,9 @@
 /*
  * First KLEE tutorial: testing a small function
  */
+
 //test just a 
+//ni dongde
 //	printf("out hi function\n");
 
 int main(int argc, char **argv) {
